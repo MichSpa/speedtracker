@@ -136,9 +136,9 @@ export default {
     },
     lighthouse: {
       color: [121, 180, 115],
-      name: 'Lighthouse PWA score',
+      name: 'Lighthouse Performance score',
       unit: '',
-      description: 'A Progressive Web App (PWA) score defined by Google Lighthouse'
+      description: 'A Performance score defined by Google Lighthouse'
     }
   },
 
