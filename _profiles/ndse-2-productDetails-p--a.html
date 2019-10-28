@@ -3,7 +3,7 @@
 # The human-friendly name of the profile. Whenever you're asked for the profile
 # ID, it refers to the name of the profile file — in this case, "default".
 #
-name: "NDSE Product Details PX1005QL (IE EC2, 3G, Chrome)"
+name: "NDSE Product Details M353WS (IE EC2, Cable, Chrome)"
 
 #
 # The default profile will be the one shown when accessing the root URL of your
@@ -16,7 +16,7 @@ default: false
 # with a minimum value of 12, as only two scheduled tests per day are allowed.
 # To disabled repeated tests, simply remove this property from the profile.
 #
-interval: 96
+#interval: 48
 
 #
 # WebPageTest test parameters.
@@ -25,13 +25,14 @@ interval: 96
 # https://www.npmjs.com/package/webpagetest
 #
 parameters:
-  connectivity: "3G"
+  connectivity: "Cable"
   location: "ec2-eu-west-1:Chrome"
 #  firstViewOnly: false
   firstViewOnly: true
   runs: 3
-  emulateMobile: true
-  url: "https://www.nec-display-solutions.com/p/de/de/products/details/rp/PX1005QL.xhtml"
+  viewportWidth: 1440
+  viewportHeight: 900
+  url: "https://www.nec-display-solutions.com/p/de/de/products/details/rp/M353WS.xhtml"
 
 #
 # The URL of the WebPageTest instance to be used with this profile. Please note that
@@ -53,10 +54,10 @@ parameters:
 budgets:
   -
     metric: TTFB
-    max: 1000
+    max: 800
 #    alerts: ["emailAlert", "slackAlert"]
   -
     metric: firstPaint
-    max: 4000
+    max: 2000
 #    alerts: ["slackAlert"]
 ---
